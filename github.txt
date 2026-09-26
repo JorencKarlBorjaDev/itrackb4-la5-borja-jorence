@@ -7,37 +7,3 @@ https://github.com/JorencKarlBorjaDev/itrackb4-la4-borja-jorence
 https://github.com/JorencKarlBorjaDev/itrackb4-la5-borja-jorence.git
 
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Book Filter</title>
-</head>
-<body>
-
-    <h1>Book Filter</h1>
-
-    @if ($genre)
-        <p><strong>Active Filter:</strong> {{ $genre }}</p>
-    @else
-        <p><strong>Showing:</strong> All Books</p>
-    @endif
-
-    @foreach ($books as $book)
-        <div>
-            <h2>{{ $book['title'] }}</h2>
-
-            <p><strong>ID:</strong> {{ $book['id'] }}</p>
-            <p><strong>Author:</strong> {{ $book['author'] }}</p>
-            <p><strong>Year:</strong> {{ $book['year'] }}</p>
-            <p><strong>Genre:</strong> {{ $book['genre'] }}</p>
-        </div>
-
-        <hr>
-    @endforeach
-
-    <p><strong>Name:</strong> Jorence Karl Borja</p>
-
-    <a href="{{ route('books.index') }}">Back to Books</a>
-
-</body>
-</html>
